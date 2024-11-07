@@ -3,11 +3,11 @@ Instruções para entrega
 # 2️⃣ Calculadora de partidas Rankeadas
 **O Que deve ser utilizado**
 
-- Variáveis
-- Operadores
+- ✅ Variáveis
+- ✅ Operadores
 - Laços de repetição
-- Estruturas de decisões
-- Funções
+- ✅ Estruturas de decisões
+- ✅ Funções
 
 ## Objetivo:
 
@@ -27,3 +27,35 @@ Se vitórias for maior ou igual a 101 = Imortal
 Ao final deve se exibir uma mensagem:
 "O Herói tem de saldo de **{saldoVitorias}** está no nível de **{nivel}**"
 */
+
+/*
+I Could choose to use a JSON Structury, like below, but i choose to follow the challenge
+let playerinfos = {
+    victory:,
+    defeats: 
+}
+function calcranked(playerinfos){
+    return (playerinfos.victory - playerinfos.defeats)
+}
+*/
+
+function calcranked(victory, defeats){
+    return balance = (victory - defeats);
+}
+
+let rank = "";
+calcranked(21,10);
+
+switch (true){
+    case (balance <= 10): //I Could use the function inside the case, but I think this way is cleaner than writing every time case(calcranked(**winvariable**,**losevariable**) **condition**)
+        rank = "Ferro";
+        console.log(`O Herói tem saldo de ${balance} e está no nível de ${rank}`)
+        break;
+    case (balance >= 11 && balance <= 20):
+        rank = "Bronze";
+        console.log(`O Herói tem saldo de ${balance} e está no nível de ${rank}`);
+        break;
+    default:
+        console.log("Error");
+        break;
+}
