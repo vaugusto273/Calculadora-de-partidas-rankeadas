@@ -44,7 +44,7 @@ function calcranked(victory, defeats){
 }
 
 let rank = "";
-calcranked(21,10);
+calcranked(101,0);
 
 switch (true){
     case (balance <= 10): //I Could use the function inside the case, but I think this way is cleaner than writing every time case(calcranked(**winvariable**,**losevariable**) **condition**)
@@ -53,6 +53,26 @@ switch (true){
         break;
     case (balance >= 11 && balance <= 20):
         rank = "Bronze";
+        console.log(`O Herói tem saldo de ${balance} e está no nível de ${rank}`);
+        break;
+    case (balance >= 21 && balance <= 50):
+        rank = "Prata";
+        console.log(`O Herói tem saldo de ${balance} e está no nível de ${rank}`);
+        break;
+    case (balance >= 51 && balance <= 80):
+        rank = "Ouro";
+        console.log(`O Herói tem saldo de ${balance} e está no nível de ${rank}`);
+        break;
+    case (balance >= 81 && balance <= 90):
+        rank = "Diamante";
+        console.log(`O Herói tem saldo de ${balance} e está no nível de ${rank}`);
+        break;
+    case (balance >= 91 && balance <= 100):
+        rank = "Lendário";
+        console.log(`O Herói tem saldo de ${balance} e está no nível de ${rank}`);
+        break;
+    case (balance >= 101):
+        rank = "Imortal";
         console.log(`O Herói tem saldo de ${balance} e está no nível de ${rank}`);
         break;
     default:
